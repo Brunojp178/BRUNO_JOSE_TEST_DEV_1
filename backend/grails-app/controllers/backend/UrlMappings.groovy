@@ -9,7 +9,9 @@ class UrlMappings {
             }
         }
 
-        "/company/list.json"(controller: "Company", action: "HTTPRequest")
+        "/company/list"(controller: "Company", action: "HTTPRequest")
+
+        "/company/list/$filter"(controller: "Company", action: "HTTPRequest")
 
         "/"(view:"/index")
         "500"(view:'/error')

@@ -13,23 +13,36 @@ export class CompanyComponent implements OnInit{
 
   // Holds the response from the HTTPS request
   data: Company[] = [];
-
+  singleData;
+  
   constructor(private companyService: CompanyService) {}
 
   // Search content
   typed = '';
+
+  // TODO Filter the json response using the input from the search input
   display = '';
 
   onKey(event: any) { // without type info
     this.typed = event.target.value;
   }
 
+  onClickMe(){
+    this.getSingleCompany(this.typed);
+  }
+
   ngOnInit(): void {
     this.getCompanies();
+    
+    this.getSingleCompany("");
   }
 
   getCompanies(): void {
-    this.companyService.getCompanies().subscribe(companies => this.data = companies);
+    this.companyService.getCompanies(null).subscribe(companies => this.data = companies);
+  }
+
+  getSingleCompany(filter: String): void{
+    this.companyService.getCompanies(filter).subscribe(companies => this.singleData = companies);
   }
   
 }

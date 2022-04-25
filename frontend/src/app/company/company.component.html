@@ -1,6 +1,8 @@
 <div>
   <h2 class="center">Companies</h2> 
-  <input (keyup)="onKey($event)" title="Search"> <button type="button" (click)="onClickMe()">Search</button>
+  <div class="center"> 
+    <input (keyup)="onKey($event)" title="Search"> <button type="button" (click)="onClickMe()">Search</button>  
+  </div>
   <table class="table">
     <thead>
         <tr>
@@ -17,3 +19,4 @@
     </tbody>
   </table>
 </div>
+Search Results: Name: {{singleData.name}}, Segment: {{singleData.segment}}

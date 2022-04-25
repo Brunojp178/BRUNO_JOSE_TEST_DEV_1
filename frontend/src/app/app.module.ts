@@ -9,7 +9,7 @@ import { CompanyComponent } from './company/company.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CompanyComponent
+    CompanyComponent,
   ],
   imports: [
     BrowserModule,
