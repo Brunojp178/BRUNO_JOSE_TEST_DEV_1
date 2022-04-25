@@ -11,6 +11,6 @@ class Company {
     }
 
     String toString(){
-        return "{ Nome: " + name + "; Segmento: " + segment + " }"
+        return "Nome: " + name + "; Segmento: " + segment
     }
 }

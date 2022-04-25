@@ -9,6 +9,8 @@ class UrlMappings {
             }
         }
 
+        "/company/list.json"(controller: "Company", action: "HTTPRequest")
+
         "/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')
